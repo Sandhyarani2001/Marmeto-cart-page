@@ -75,7 +75,7 @@ header nav .icons {
 }
 
 .hero {
-  background-image: url('../images/hero-icon.png');
+  background-image: url('images/hero-icon.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -228,10 +228,6 @@ header nav .icons {
 .cart-item:hover {
   background-color: #f8f8f8;
 }
-
-
-
-
 .cart-totals {
   width: 390px;
   height: 385px;
@@ -365,7 +361,7 @@ footer div img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  background-color: rgba(0, 0, 0, 0.6); 
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease-in-out;
@@ -376,10 +372,10 @@ footer div img {
   background-color: white;
   padding: 30px;
   text-align: center;
-  border-radius: 10px; /* Smooth rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  border-radius: 10px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
   max-width: 400px;
-  width: 90%; /* Responsive width */
+  width: 90%; 
   animation: scaleIn 0.3s ease-in-out;
 }
 
@@ -390,13 +386,13 @@ footer div img {
 }
 
 button {
-  background-color: #3498db; /* Nice blue button */
+  background-color: #3498db; 
   border: none;
   color: white;
   padding: 10px 20px;
   margin: 10px;
   font-size: 16px;
-  border-radius: 5px; /* Rounded buttons */
+  border-radius: 5px; 
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -404,7 +400,7 @@ button {
 
 
 #cancelRemove {
-  background-color: #e74c3c; /* Red color for cancel button */
+  background-color: #e74c3c; 
 }
 
 #cancelRemove:hover {
@@ -455,22 +451,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 10; /* Make sure it's above other content */
-}
-
-.hamburger .bar {
-  height: 3px;
-  width: 30px;
-  background-color: black; /* Change color as needed */
-  margin: 3px 0; /* Space between bars */
-}
-
 
 /* Responsive Styling */
 
@@ -617,56 +597,140 @@ button {
 }
 
 /* For screens 450px and below */
-@media screen and (max-width: 430px) {
-  header {
-    height: auto;
-    padding: 0 20px;
+@media screen and (max-width: 480px) {
+  .logo img{
+    height: 25px;
+  }
+  .logo p{
+    font-size: 25px;
+  }
+  header{
+    height: 70px;
+  }
+  .menus{
+    width: 300px;
+    display: none !important;
+  }
+  .icons {
+      display: none !important;
+    width: 120px;
+    font-size: 20px;
+  }
+  .hero {
+    height: 150px; 
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
   }
 
-  /* Hide the menus and icons initially */
-  .menus, .icons {
-    display: none;
+  .hero-content p {
+    font-size: 32px; 
   }
 
-  /* Hamburger icon */
-  .hamburger {
-    display: flex;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-  /* When the hamburger menu is active, show the menus and icons */
-  nav.active .menus,
-  nav.active .icons {
-      display: flex; /* Show menus when active */
-      flex-direction: column; /* Stack items vertically */
-      position: absolute; /* Optional: Position it absolutely */
-      background-color: white; /* Background for dropdown */
-      /* top: 100%;  */
-      right: 50px; /* Align to the right */
-      width: 50%; /* Full width */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  }
-  nav.active {
-    height: auto; /* Allow height to adjust */
+.product-table {
+  width: 80%;
+  margin-left: 0; 
+  margin-bottom: 30px !important; 
 }
 
-  /* Responsive sections */
-  .cart-sec {
-    width: 100%;
-    padding: 10px;
+.product-table td:first-child {
+  width: 100%;
+  margin-left: 90px;
+ 
+}
+.product-image {
+  max-width: 100%; 
+  height: auto;
+}
+
+.product-table thead {
+  display: none;
+}
+
+.product-table tbody tr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.item-quantity {
+  font-size: 14px;
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  padding: 15px;
+}
+.product-table td {
+  border: none;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+}
+.cart-items {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-table td:not(:first-child)::before {
+  content: attr(data-label);
+  font-weight: bold;
+  margin-right: 10px;
+  min-width: 80px;
+}
+
+.item-quantity {
+  width: 60px;
+  text-align: right;
+}
+
+.remove-item {
+  width: 100%;
+  text-align: right;
+  padding: 10px 0 0;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+ .cart-sec {
+    padding: 0;
+    margin-top: 15px;
+   
   }
 
   .cart-container {
-    flex-direction: column;
-    align-items: center;
     width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
   }
 
-  .product-table {
-    width: 100%;
-    font-size: 14px;
-  }
+
+/* Responsive sections */
+.cart-totals {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+}
 
   footer {
     width: 100%;
@@ -674,14 +738,17 @@ button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 250px;
+    padding: 20px 10px;
   }
   footer .footer-info{
-    width: 600px;
-    height: 190px;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
   
 

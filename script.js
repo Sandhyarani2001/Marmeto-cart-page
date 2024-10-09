@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartSubtotal = document.getElementById('cart-subtotal');
     const cartTotal = document.getElementById('cart-total');
     const loader = document.getElementById('loader');
-    const hamburger = document.getElementById('hamburger');
     const order = document.getElementById('checkout-btn');
-    const nav = document.querySelector('nav');
 
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -13,10 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Order successfully")
     })
 
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active'); // Toggles the 'active' class on the nav element
-        console.log(nav.classList); // Log the classes to see if 'active' is being added/removed
-    });
+
+   
     // Update Cart Totals
     function updateCartTotals(items) {
         let subtotal = items.reduce((acc, item) => acc + (item.price * item.quantity), 0);
@@ -58,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <td class="product-subtotal">Rs. ${(item.price * item.quantity).toFixed(2)}</td>
             <td>
                 <button class="remove-item" data-id="${item.id}">
-                    <img src="../images/delete.png" alt="Remove" class="remove-icon">
+                    <img src="images/delete.png" alt="Remove" class="remove-icon">
                 </button>
             </td>
         </tr>`).join('')}
