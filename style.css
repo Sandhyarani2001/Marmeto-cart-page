@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 70px;
+}
+
+header nav {
+  width: 1286px;
+  height: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  gap: 5px;
+
+  img {
+    width: 50px;
+    height: 32px;
+
+  }
+}
+
+header nav .menus {
+  width: 430px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menus a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+header nav .icons {
+  display: flex;
+  gap: 35px;
+
+  img {
+    width: 28px;
+    height: 28px;
+    border: 2px solid transparent;
+  }
+}
+
+.hero {
+  background-image: url('../images/hero-icon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 316px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+
+  p {
+    font-size: 48px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Poppins", sans-serif;
+    ;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .span2 {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Poppins", sans-serif;
+
+  }
+}
+
+.cart-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width:100%;
+  height: 525px;
+}
+
+.cart-container {
+  width: 1240px;
+  height: 390px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-items {
+  width: 817px;
+  height: 215px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cart-item img {
+  width: 80px;
+  height: auto;
+}
+
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #8c8c8c;
+}
+
+.product-table th {
+  text-align: left;
+  padding-left: 10px;
+  height: 55px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Poppins";
+  background-color: rgba(249, 241, 231, 1);
+}
+
+.product-table td {
+  padding: 15px 10px;
+  vertical-align: middle;
+}
+
+.product-table tbody tr {
+  border-top: 1px solid #f0f0f0;
+}
+
+.product-image {
+  width: 108px !important;
+  height: 105px !important;
+  border-radius: 8px;
+
+}
+.product-price,
+.product-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(159, 159, 159, 1);
+  font-family: "Poppins";
+}
+
+.product-subtotal {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+.item-quantity {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-family: "Poppins";
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgba(159, 159, 159, 1);
+  border-radius: 4px;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-icon {
+  width: 21px !important;
+  height: 21px !important;
+}
+
+/* Subtle hover effects */
+.cart-item:hover {
+  background-color: #f8f8f8;
+}
+
+
+
+
+.cart-totals {
+  width: 390px;
+  height: 385px;
+  background-color: rgba(249, 241, 231, 1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.cart-totals h2 {
+  margin-bottom: 60px;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+
+}
+
+.subtotal {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Poppins", sans-serif;
+  ;
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(159, 159, 159, 1);
+    margin-left: 70px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.total {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Poppins", sans-serif;
+
+  span {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(184, 142, 47, 1);
+    margin-left: 70px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+#checkout-btn {
+  width: 222px;
+  height: 58px;
+  border-radius: 15px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  max-width: 100%;
+  height: 270px;
+  /* padding: 0 60px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(250, 243, 234, 1);
+  margin-top: 20px;
+}
+
+.footer-info {
+  width: 1270px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2px;
+
+    p {
+      font-size: 25px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      color: rgba(36, 36, 36, 1);
+    }
+
+    .para2 {
+      font-size: 20px;
+      font-weight: 500;
+      font-family: 'Poppins';
+      color: rgba(137, 137, 137, 1);
+    }
+
+  }
+}
+footer div{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div img {
+  width: 60px;
+  height: 60px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Poppins";
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  max-width: 400px;
+  width: 90%; /* Responsive width */
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #3498db; /* Nice blue button */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 5px; /* Rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+
+#cancelRemove {
+  background-color: #e74c3c; /* Red color for cancel button */
+}
+
+#cancelRemove:hover {
+  background-color: #c0392b;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+  }
+}
+
+/* Loader CSS */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 10; /* Make sure it's above other content */
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 30px;
+  background-color: black; /* Change color as needed */
+  margin: 3px 0; /* Space between bars */
+}
+
+
+/* Responsive Styling */
+
+
+@media screen and (max-width: 1024px) {
+  /* Adjust the layout for mobile */
+
+
+
+  header {
+    max-width: 100%;
+    height: 90px;
+    padding: 0 20px;
+  }
+
+  header nav {
+    width: 1000px;
+    height: 31px;
+  }
+
+  .menus {
+    justify-content: space-evenly;
+  }
+
+  nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    gap: 5px;
+  
+    img {
+      width: 30px;
+      height: 22px;
+  
+    }
+  }
+
+  header nav .menus {
+    width: 300px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .menus a {
+    font-size: 14px;
+  }
+  header nav .icons {
+    display: flex;
+    gap: 20px;
+  
+    img {
+      width: 25px;
+      height: 25px;
+      border: 2px solid transparent;
+    }
+  }
+
+
+  /* hero */
+  .hero {
+    height: 290px;
+    max-width: 100%; 
+    margin-bottom: 100px; 
+  }
+
+  /* cart-sec */
+  .cart-sec {
+    width: 100%;
+    height: 525px;
+    margin-bottom: 80px;
+  }
+  .cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;   
+    height: auto;
+  }
+
+  .cart-totals h2 {
+    font-size: 24px;
+  }
+
+  #checkout-btn {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .product-table {
+    margin-left: 50px;
+    width: 700px;
+  }
+
+  footer {
+   width: 100%;
+  }
+  .footer-info {
+    width: 700px;
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+  }
+  .footer-info div { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .footer-info div .text {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+  
+  footer div .text p {
+    font-size: 16px;
+  }
+  
+  footer div .text .para2 {
+    font-size: 14px;
+  }
+  footer div img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Modal for Remove Confirmation - Responsive */
+@media screen and (max-width: 1024px) {
+  .modal-content {
+    padding: 20px;
+    width: 80%;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* For screens 450px and below */
+@media screen and (max-width: 430px) {
+  header {
+    height: auto;
+    padding: 0 20px;
+  }
+
+  /* Hide the menus and icons initially */
+  .menus, .icons {
+    display: none;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: flex;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* When the hamburger menu is active, show the menus and icons */
+  nav.active .menus,
+  nav.active .icons {
+      display: flex; /* Show menus when active */
+      flex-direction: column; /* Stack items vertically */
+      position: absolute; /* Optional: Position it absolutely */
+      background-color: white; /* Background for dropdown */
+      /* top: 100%;  */
+      right: 50px; /* Align to the right */
+      width: 50%; /* Full width */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  nav.active {
+    height: auto; /* Allow height to adjust */
+}
+
+  /* Responsive sections */
+  .cart-sec {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cart-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  footer {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-info{
+    width: 600px;
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+}

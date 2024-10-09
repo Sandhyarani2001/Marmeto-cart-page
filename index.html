@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmeto Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="Marmeto Logo">
+                <p>Marmeto</p>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="menus">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="icons">
+                <img src="images/search-icon.png" alt="Cart">
+                <img src="images/heart-icon.png" alt="Cart">
+                <img src="images/cart-icon.png" alt="Cart">
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <img src="images/logo.png" alt="">
+                    <p>Cart</p>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a> <span class="span1">&#10095;</span> <span class="span2">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-sec">
+            <div id="loader" class="loader"></div>
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+
+                    <!-- Dynamic Cart Items Will Appear Here -->
+                </div>
+
+                <div class="cart-totals">
+                    <h2>Cart Totals</h2>
+                    <div>
+                        <p class="subtotal">Subtotal: <span id="cart-subtotal">Rs. 0.00</span></p>
+                        <p class="total">Total: <span id="cart-total">Rs. 0.00</span></p>
+                    </div>
+
+                    <button id="checkout-btn">Check Out</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <div>
+                <div class="footer-img">
+                    <img src="images/quality-icon.png" alt="High Quality">
+                </div>
+                <div class="text">
+                    <p>High Quality</p>
+                    <p class="para2">crafted from top materials</p>
+                </div>
+            </div>
+            <div>
+                <div class="footer-img">
+                    <img src="images/warranty-icon.png" alt="Warranty Protection">
+                </div>
+                <div class="text">
+                    <p>Warranty Protection</p>
+                    <p class="para2">over 2 years</p>
+                </div>
+            </div>
+            <div>
+                <div class="footer-img">
+                    <img src="images/shipping-icon.png" alt="Free Shipping">
+                </div>
+                <div class="text">
+                    <p>Free Shipping</p>
+                    <p class="para2">order over 150 $</p>
+                </div>
+            </div>
+            <div>
+                <div class="footer-img">
+                    <img src="images/support-icon.png" alt="24/7 Support">
+                </div>
+                <div class="text">
+                    <p>24/7 Support</p>
+                    <p class="para2">Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Remove Confirmation -->
+    <div id="removeModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to remove this item?</p>
+            <button id="confirmRemove">Yes</button>
+            <button id="cancelRemove">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
